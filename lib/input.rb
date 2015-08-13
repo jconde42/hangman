@@ -12,3 +12,15 @@ def main_menu_input
 
   return input
 end
+
+def get_letter
+  letter = gets.chomp
+
+  if letter.length != 1
+    puts "Please enter only one letter"
+    letter = get_letter
+  else
+    return letter
+  end
+end
+
