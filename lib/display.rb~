@@ -10,4 +10,3 @@ def display_main_menu error=false
   print "\n\n>> "
   end
 end
-
