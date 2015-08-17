@@ -1,3 +1,3 @@
 ## 
-def play word, lives
+def play word, lives, guesses
 end

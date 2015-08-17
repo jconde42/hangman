@@ -16,12 +16,19 @@ end
 def get_letter
   letter = gets.chomp
 
-  if letter.length != 1
+  if letter.length != 1 or !is_letter? letter
     puts "Please enter only one letter"
     letter = get_letter
-  else
+  elsif is_letter? letter and letter.length == 1
     return letter
   end
 end
 
 
+def is_letter? letter
+  if letter.downcase < "a" or letter.downcase > "z"
+    return false
+  else
+    return true
+  end
+end

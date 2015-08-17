@@ -4,6 +4,4 @@ def load_game
   lives = lines[0,0] 
   word = lines[0,1]
   guess_arr = lines[0,2]
-
- 
 end
