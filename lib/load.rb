@@ -1,11 +1,10 @@
-#TODO this is broken
-def load_game
-  if File.exist? "saves/savefile.txt"
-    lines = File.readlines("saves/savefile.txt")
-    lives = lines[0,0] 
-    word = lines[0,1]
-    guess_arr = lines[0,2]
-  end
+require 'csv'
+#TODO
 
-  save = [lives, word, guess_arr]
+def load_game
+  save_arr = CSV.open('./saves/savefile.csv')
+  p save_arr.to_a[0]
+  
 end
+
+p load_game
