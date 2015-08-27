@@ -28,3 +28,12 @@ def pick_word
   word.downcase
 end
 
+flag = false
+
+1000.times do
+  word = pick_word
+  if word.length < 5 or word.length > 12
+    flag = true
+  end
+end
+p flag

@@ -27,4 +27,3 @@ def pick_word
   
   word.downcase
 end
-
