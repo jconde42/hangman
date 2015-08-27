@@ -24,7 +24,7 @@ def pick_word
   until (validWord? word) == true
     word = pick_word
   end
-
-  word
+  
+  word.downcase
 end
 

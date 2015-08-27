@@ -20,7 +20,7 @@ def get_letter
     puts "Please enter only one letter"
     letter = get_letter
   elsif is_letter? letter and letter.length == 1
-    return letter
+    return letter.downcase
   end
 end
 

@@ -25,6 +25,6 @@ def pick_word
     word = pick_word
   end
   
-  word
+  word.downcase
 end
 
