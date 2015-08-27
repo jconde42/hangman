@@ -1,5 +1,4 @@
 Basic Hangman game
 
 TODO:
-Load
-Save
+word should be 5 to 12 characters long. This is not always the case.

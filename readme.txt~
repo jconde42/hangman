@@ -1,0 +1,5 @@
+Basic Hangman game
+
+TODO:
+Load
+Save
