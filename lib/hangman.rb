@@ -10,8 +10,12 @@ def main
     guess_arr = []
     play word, 9, guess_arr
   when "2" # load game
-    #TODO
-
+    arr = load_game
+    lives = arr[0].to_i
+    word = arr[1]
+    guess_arr = arr[2]
+    working_map = arr[3]
+    play word, lives, guess_arr, working_map
   when "3" # how to play
     how_to_play
     main
@@ -19,6 +23,5 @@ def main
     puts "\nExiting Program"
   end
 end
-
 
 main

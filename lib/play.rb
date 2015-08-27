@@ -1,8 +1,13 @@
 #TODO I have to call the save function somewhere in here
 
-def play word, lives, guess_arr
+def play word, lives, guess_arr, loaded_working_map=""
   complete_word_map = word.chomp.split(//)
-  working_word_map = Array.new(complete_word_map.length,"_")
+
+  if loaded_working_map == ""
+    working_word_map = Array.new(complete_word_map.length,"_")
+  else
+    working_word_map = loaded_working_map
+  end
 
 
 
@@ -15,6 +20,12 @@ def play word, lives, guess_arr
       display_game lives, working_word_map, guess_arr
     end
     guess = get_letter
+
+
+    if guess == "!"
+      save_game lives, word, guess_arr, working_word_map
+      break
+    end
 
     if guess_arr.include?(guess)
       guess_error = true

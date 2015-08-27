@@ -1,10 +1,24 @@
-require 'csv'
-#TODO
-
 def load_game
-  save_arr = CSV.open('./saves/savefile.csv')
-  p save_arr.to_a[0]
-  
+  arr = []
+  save_arr = CSV.read('./saves/savefile.csv')
+
+  lives = save_arr[0][0]
+  word = save_arr[0][1]
+  guess_arr = fix_arr save_arr[0][2]
+  working_map = fix_arr save_arr[0][3]
+
+  return [lives,word,guess_arr, working_map]
 end
 
-p load_game
+
+def fix_arr string
+  fixed = [];
+
+  string.each_char do |chr|
+    if (chr.downcase >= 'a' and chr.downcase <= 'z') or chr.downcase == "_"
+      fixed.push chr
+    end
+  end
+
+  fixed
+end

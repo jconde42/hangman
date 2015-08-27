@@ -26,7 +26,7 @@ end
 
 
 def is_letter? letter
-  if letter.downcase < "a" or letter.downcase > "z"
+  if (letter.downcase < "a" or letter.downcase > "z") and letter != "!"
     return false
   else
     return true
